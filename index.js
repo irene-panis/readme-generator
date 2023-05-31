@@ -40,8 +40,10 @@ const questions = [
     type: 'list', 
     message: 'What kind of license are you using for this project?',
     choices: [
-      'License A',
-      'License B',
+      'MIT License',
+      'GPL v3 (General Public License Version 3.0)',
+      'Apache License 2.0',
+      'None',
     ]
   },
   {
