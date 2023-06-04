@@ -32,15 +32,17 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (!license) { return ""; }
+  if (license === "None") { return ""; }
   return `## License\n
-This project is licensed under the ${license}.`;
+This project is licensed under the [${license}](${renderLicenseLink(license)}).`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}\n
 ${renderLicenseBadge(data.license)}\n
+## Table of Contents\n
+${generateTable(data)}\n
 ## Description\n
 ${data.description}\n
 ## Installation instructions\n
@@ -54,6 +56,26 @@ ${data.test}\n
 ${renderLicenseSection(data.license)}\n
 ## Questions\n
 For inquiries on this project, please contact me through GitHub @ [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.`;
+}
+
+// function to help generate table of contents
+function generateTable(data) {
+  if (data.license === "None") {
+    return `> 1. [Description](#description)
+> 2. [Installation instructions](#installation-instructions)
+> 3. [Usage](#usage)
+> 4. [Contribution guidelines](#contribution-guidelines)
+> 5. [Test instructions](#test-instructions)
+> 6. [Questions(#questions)]`
+  } else {
+    return `> 1. [Description](#description)
+> 2. [Installation instructions](#installation-instructions)
+> 3. [Usage](#usage)
+> 4. [Contribution guidelines](#contribution-guidelines)
+> 5. [Test instructions](#test-instructions)
+> 6. [License](#license)
+> 7. [Questions](#questions)`
+  }
 }
 
 module.exports = {
