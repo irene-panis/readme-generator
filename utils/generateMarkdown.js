@@ -66,7 +66,7 @@ function generateTable(data) {
 > 3. [Usage](#usage)
 > 4. [Contribution guidelines](#contribution-guidelines)
 > 5. [Test instructions](#test-instructions)
-> 6. [Questions(#questions)]`
+> 6. [Questions](#questions)`
   } else {
     return `> 1. [Description](#description)
 > 2. [Installation instructions](#installation-instructions)
