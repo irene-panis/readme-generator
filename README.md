@@ -10,6 +10,8 @@ Users are able to run this application by typing "node index" in their terminal 
 
 ![Screenshot of terminal displaying the flow of the application from start to finish](assets/img/preview.jpg)
 
+![Screenshot of resulting README.md code and preview](assets/img/preview2.jpg)
+
 ## Technologies Used
 * Node.js
 
